@@ -8,6 +8,6 @@ export default defineConfig({
   },
   site: import.meta.env.DEV
     ? 'http://localhost:4321/'
-    : 'https://dominicnikolai.github.io/project-239/',
-  base: import.meta.env.DEV ? undefined : '/project-239/'
+    : 'https://dominicnikolai.github.io/project-628/',
+  base: import.meta.env.DEV ? undefined : '/project-628/'
 });

@@ -1,17 +1,17 @@
-<div class="wrapper">
-  <div class="slider">
-    <div class="content">
-      <div class="slide">
-        <img src="/assets/pexels-photo-1565263.jpeg" alt="" />
+<div class='wrapper'>
+  <div class='slider'>
+    <div class='content'>
+      <div class='slide'>
+        <img src='/assets/pexels-photo-1565263.jpeg' alt='' />
       </div>
-      <div class="slide">
-        <img src="/assets/pexels-photo-733534.jpeg" alt="" />
+      <div class='slide'>
+        <img src='/assets/pexels-photo-733534.jpeg' alt='' />
       </div>
-      <div class="slide">
-        <img src="/assets/pexels-photo-14642247.jpeg" alt="" />
+      <div class='slide'>
+        <img src='/assets/pexels-photo-14642247.jpeg' alt='' />
       </div>
-      <div class="slide">
-        <img src="/assets/pexels-photo-1643407.jpeg" alt="" />
+      <div class='slide'>
+        <img src='/assets/pexels-photo-1643407.jpeg' alt='' />
       </div>
     </div>
   </div>
@@ -76,7 +76,7 @@
 
   console.clear();
 
-  const images: Element[] = gsap.utils.toArray("img");
+  const images: Element[] = gsap.utils.toArray('img');
   const totalImages: number = images.length;
   const getElement = gsap.utils.wrap(images);
   let currentIndex: number = 0;
@@ -90,18 +90,18 @@
     const nextImage = getElement((currentIndex += direction));
     gsap.to(currentImage, {
       duration: 1,
-      ease: "power1.inOut",
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)"
+      ease: 'power1.inOut',
+      clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'
     });
     gsap.fromTo(
       nextImage,
       {
-        clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
+        clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
       },
       {
         duration: 1,
-        ease: "power1.inOut",
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        ease: 'power1.inOut',
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         onComplete: () => {
           isTweening = false;
           timer.restart(true);
@@ -112,7 +112,7 @@
 
   Observer.create({
     target: window,
-    type: "wheel",
+    type: 'wheel',
     onUp: () => {
       timer && timer.pause();
       doSlide(-1);
